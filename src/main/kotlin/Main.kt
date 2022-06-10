@@ -3,8 +3,8 @@ fun primes() = sequence {
     for (i in 2..Int.MAX_VALUE) {
         var isPrime = true
         for (j in primeList) {
+            if (j > kotlin.math.sqrt(i.toDouble())) break
             if (i % j == 0) {
-                if (j > kotlin.math.sqrt(i.toDouble())) break
                 isPrime = false
                 break
             }
